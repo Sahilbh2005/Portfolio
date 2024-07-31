@@ -1,0 +1,710 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
+    list-style: none;
+    text-decoration: none;
+    scroll-behavior: smooth;
+    border: none;
+    outline: none;
+}
+
+:root{
+    --bg-color: #191919;
+    --second-bg-color: #101010;
+    --main-color: #FFD700;
+    --text-color: #fff;
+    --second-color: #e4e4e4;
+    --other-color: #c6c9d8bf;
+
+    --h1-font: 7rem;
+    --h2-font: 4rem;
+    --h3-font: 3.5rem;
+    --p-font: 1.1rem;
+}
+
+body{
+    color: var(--text-color);
+    background: var(--bg-color);
+}
+
+header{
+    position: sticky;
+    top: 0;
+    right: 0;
+    z-index: 1000;
+    width: 100%;
+    height: 75px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 28px 11%;
+    border-bottom: 1px solid transparent;
+    transition: all ease .50s;
+    background-color: #101010;
+}
+
+.logo img{
+    width: 155px;
+    height: 75px;
+    background: transparent;
+}
+
+.logo img:hover{
+    border: 1px solid var(--main-color);
+    cursor: pointer;
+}
+
+.navlist{
+    display: flex;
+}
+
+.navlist a{
+    color: var(--second-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    margin: 0 40px;
+    transition: all ease .40s;
+}
+
+.navlist a:hover{
+    color: var(--main-color);
+}
+
+#menu-icon{
+    font-size: 42px;
+    color: var(--text-color);
+    z-index: 10001;
+    cursor: pointer;
+    display: none;
+}
+
+section{
+    padding: 160px 30% 110px;
+}
+
+.home {
+    position: relative;
+    min-height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 180px 11% 110px;
+    background: url(/background.jpg);
+    background-size: cover;
+}
+
+.main-img img{
+    width: 23rem;
+    border-radius: 50%;
+}
+
+.main-img img:hover{
+    transform: scale(1.1) ;
+    box-shadow: 0 0 50px var(--main-color);
+}
+
+.hero-text {
+    flex: 1;
+}
+
+.image {
+    flex: 0 0 auto;
+}
+
+.hero-text h3{
+    color: var(--second-color);
+    font-size: 22px;
+    font-weight: 600;
+    margin-bottom: 15px;
+    word-spacing: 10px;
+}
+
+.hero-text h1{
+    font-family: "Dancing Script", cursive;
+    font-size: var(--h1-font);
+    color: var(--text-color);
+    font-weight: 700;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+}
+
+.hero-text h1:hover{
+    text-shadow: 0 0 15px#4e5055;
+}
+
+.hero-text h4{
+    color: var(--second-color);
+    font-size: 25px;
+    font-weight: 600;
+    word-spacing: 15px;
+    margin-bottom: 3.5rem;
+}
+
+.btn{
+    display: inline-block;
+    padding: 15px 40px;
+    background: var(--main-color);
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    border: 2pxx solid var(--main-color);
+    border-radius: 10px;
+    transition: all ease .50s;
+    margin: 20px;
+}
+
+.btn:hover{
+    transform: translateX(5px);
+    background: transparent;
+    border: 2px solid var(--main-color);
+}
+
+.about {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 11%; 
+    gap: 2rem; 
+}
+
+.about-img {
+    flex: 1; 
+    display: flex;
+    justify-content: flex-start; 
+}
+
+.about-img img {
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    object-fit: cover; 
+}
+
+.about-img img:hover{
+    transform: scale(1.5) ;
+    box-shadow: 0 0 20px var(--main-color);
+}
+
+.about-txt{
+    flex: 2; 
+    max-width: 60%; 
+}
+
+.about-txt h2 {
+    font-size: var(--h2-font);
+    font-family: "Dosis";
+    margin-bottom: 1rem;
+}
+
+.about-txt h5 {
+    font-size: 20px;
+    margin-bottom: 1.5rem;
+}
+
+.about-txt p {
+    line-height: 1.6; 
+}
+
+.service{
+    background: var(--second-bg-color);
+}
+
+.txt-center{
+    text-align: center;
+}
+
+.txt-center h2{
+    font-family: "Dosis", sans-serif;
+    font-size: var(--h2-font);
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.txt-center h4{
+    font-size: 22px;
+    font-weight: 500;
+}
+
+.service-item{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    text-align: center;
+    margin-top: 2rem;
+}
+
+.service-box{
+    width: 100%;
+    height: 100%;
+    padding: 45px 30px ;
+    background: var(--bg-color);
+    border-radius: 0.8rem;
+    border: .5px solid rgb(74, 74, 74);
+    cursor: pointer;
+    transition: all ease .50s;
+}
+
+.service i{
+    font-size: 50px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+}
+
+.service h3{
+    font-size: 23px;
+    font-weight: 500;
+    margin-bottom: 12px;
+}
+
+.service p{
+    color: var(--other-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+    margin-bottom: 1.5rem;
+}
+
+.service-box:hover{
+    border: none;
+    box-shadow: 0px 0px 20px var(--main-color);
+    transform: translateY(-8px);
+}
+
+/* .contact{
+    display: flex;
+    justify-content: space-evenly; */
+    /* grid-template-columns: repeat(auto-fit, minmax(500px, 100px)); */
+    /* align-items: center;
+    gap: 5rem;
+}
+
+.left-contact{
+    display: flex;
+    align-items: flex-start;
+    text-align: center;
+    gap: 2rem;
+}
+
+.in i{
+    color:var(--main-color);
+    opacity: 0.5;
+    font-size: 80px;
+    margin-bottom: 15px;
+    transition: all ease .40s;
+}
+
+.in i:hover{
+    opacity: 1;
+    cursor: pointer;
+}
+
+.in h4{
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+}
+
+.right-contact h2{
+    font-family: "Dosis", sans-serif;
+    font-size: var(--h2-font);
+    font-weight: 800;
+    margin-bottom: 5px;
+}
+
+.right-contact a{
+    display: inline-block;
+    color: var(--main-color);
+    font-size: 20px;
+    font-weight: 600;
+    margin-bottom: 20px;
+    letter-spacing: 2px;
+    border-bottom: 2px solid var(--main-color);
+    padding: 3px 0;
+    transition: all ease .40s;
+}
+
+.right-contact a:hover{
+    transform: translateY(-5px);
+    color: var(--text-color);
+    border-bottom: 2px solid var(--text-color);
+}
+
+.right-contact p{
+    color: var(--other-color);
+    font-size: var(--p-font);
+    line-height: 30px;
+} */
+
+.txt h3{
+    font-family: "Dosis";
+    font-size: var(--h2-font);
+    font-weight: 800;
+    margin-bottom: 5px;
+    text-align: center;
+}
+
+.lang-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 2rem;
+    gap: 2.2rem;
+}
+
+.lang-icon{
+    padding: 20px 20px;
+    border-radius: 0.8rem;
+    border: 1px solid transparent;
+    cursor: pointer;
+    transition: all ease 0.50s;
+}
+
+.lang-icon:hover{
+    box-shadow: 0px 0px 20px #4e5055;
+    transform: translateY(-8px);
+    border: 1px solid #4e5055;
+}
+
+.lang-icon i{
+    font-size: 80px;
+    color: var(--main-color);
+    margin-bottom: 10px;
+    opacity: 1;
+}
+
+.lang-icon h4{
+    font-family: "Roboto";
+    font-weight: 400;
+    opacity: 1;
+}
+
+.lang-icon h4:hover{
+    color: var(--main-color);
+    font-weight: 200;
+}
+
+.Projects{
+    background: var(--second-bg-color);
+    margin-bottom: 2rem;
+    gap: 2.2rem;
+}
+
+.Projects h4{
+    text-align: center;
+    margin-top: 2rem;
+    gap: 2.2rem;
+    font-size: 22px;
+    font-weight: 300;
+    letter-spacing: 1rem;
+}
+
+.Web{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 4rem;
+    gap: 4rem;
+    transition: all 0.3s ease;
+}
+
+.Web img{
+    height: 300px;
+    width: 300px;
+    margin-bottom: .5rem;
+    border-radius: 15px;
+}
+
+.Web img:hover{
+    transform: scale(1.01);
+    box-shadow: 0px 0px 5px var(--main-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+  
+.Web h5{
+    font-size: 30px;
+    font-weight: 800;
+    font-family: "Dosis";
+}
+
+.Web p{
+    margin: 1rem;
+    font-size: var(--p-font);
+}
+
+.Web a{
+    padding: 5px 35px;
+    background: var(--main-color);
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    transition: all ease .50s;
+}
+
+.Web a:hover{
+    background: transparent;
+    cursor: pointer;
+}
+
+.Landing{
+    margin: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+}
+
+.Landing:hover{
+    box-shadow: 0px 0px 20px var(--main-color);
+    cursor: pointer;
+}
+
+.Portfolio{
+    margin: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+}
+
+.Portfolio:hover{
+    box-shadow: 0px 0px 20px var(--main-color);
+    cursor: pointer;
+}
+
+.Calculator{
+    margin: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+}
+
+.Calculator:hover{
+    box-shadow: 0px 0px 20px var(--main-color);
+    cursor: pointer;
+}
+
+.Python{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    margin-top: 4rem;
+    gap: 4rem;
+}
+
+.Python img{
+    height: 300px;
+    width: 300px;
+    margin-bottom: 2rem;
+    border-radius: 15px;
+}
+
+.Python img:hover{
+    transform: scale(1.01);
+    box-shadow: 0px 0px 20px var(--main-color);
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.Python h5{
+    font-size: 30px;
+    font-weight: 800;
+    font-family: "Dosis";
+}
+
+.Python p{
+    margin: 1rem;
+    font-size: var(--p-font);
+}
+
+.Python a{
+    padding: 5px 35px;
+    background: var(--main-color);
+    color: var(--text-color);
+    font-size: var(--p-font);
+    font-weight: 600;
+    border: 2px solid var(--main-color);
+    border-radius: 8px;
+    transition: all ease .50s;
+}
+
+.Python a:hover{
+    background: transparent;
+    cursor: pointer;
+}
+
+.Calci{
+    margin: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+}
+
+.Calci:hover{
+    box-shadow: 0px 0px 20px var(--main-color);
+    cursor: pointer;
+}
+
+.Game{
+    margin: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+}
+
+.Game:hover{
+    box-shadow: 0px 0px 20px var(--main-color);
+    cursor: pointer;
+}
+
+.Password{
+    margin: 30px;
+    padding: 20px;
+    border-radius: 10px;
+    border: 1px solid var(--main-color);
+}
+
+.Password:hover{
+    box-shadow: 0px 0px 20px var(--main-color);
+    cursor: pointer;
+}
+
+.Qualification h2{
+    font-size: 5rem;
+    font-family: "Dosis";
+    margin: 20px;
+    text-align: center;
+}
+
+.qualify{
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 8rem;
+}
+
+.a li{
+    list-style-type: disc;
+    font-family: "Dosis";
+    font-size: 3rem;
+    font-weight:bolder;
+    transition: all 0.3s ease;
+}
+
+.a li:hover{
+    letter-spacing: 2px;
+}
+
+.a h5{
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.a p{
+    font-weight: 200;
+}
+
+.edu img{
+    width: 400px;
+    height: auto;
+    border-radius: 20px;
+}
+
+.edu img:hover{
+    box-shadow: 0px 0px 50px #4e5055;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+.edu p{
+    font-size: 22px;
+    opacity: .7;
+    transition: all 0.3s ease ;
+    letter-spacing: 0.9px;
+    text-align:start;
+}
+
+.edu p:hover{
+    opacity: 1;
+    letter-spacing: 1px;
+}
+
+footer{
+    background-color: var(--second-bg-color);
+    width: auto;
+    height: 500px;
+    padding: 10px;
+}
+
+.Contacts h2{
+    font-size: var(--h2-font);
+    font-weight: 900;
+    font-family: "Dosis";
+    text-align: center;
+    margin-top: 1rem;
+}
+
+.mail{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.mail i, .phone i{
+    font-size: 30px;
+    color: var(--main-color);
+    margin-bottom: 5px;
+}
+
+.mail a, .phone h5{
+    font-size: 23px;
+    color: var(--text-color);
+    margin-bottom: 5px;
+}
+
+.mail a:hover ,.phone h5:hover{
+    opacity: 0.5;
+    text-shadow: 0 0 5px #4e5055;
+    transition: all ease-out;
+}
+
+.phone{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+    margin: 1rem;
+}
+
+.logos i{
+    font-size: 50px;
+    margin: .2rem;
+    color: var(--main-color);
+}
+
+.logo a{
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 1rem;
+}
+
+.logos i:hover{
+    opacity: .7;
+    text-shadow: 0 0 30px #4e5055;
+}
+
+.footer-el{
+    display: grid;
+    grid-template-columns: 400px 400px 300px;
+    align-items: center;
+    justify-content: center;
+    margin: 1rem;
+}

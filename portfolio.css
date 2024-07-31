@@ -29,6 +29,7 @@ body{
     background: var(--bg-color);
 }
 
+/* header-section */
 header{
     position: sticky;
     top: 0;
@@ -80,6 +81,7 @@ header{
     display: none;
 }
 
+/* main-section */
 section{
     padding: 160px 30% 110px;
 }
@@ -162,6 +164,7 @@ section{
     border: 2px solid var(--main-color);
 }
 
+/* about-section */
 .about {
     display: flex;
     align-items: center;
@@ -208,6 +211,7 @@ section{
     line-height: 1.6; 
 }
 
+/* service-section */
 .service{
     background: var(--second-bg-color);
 }
@@ -273,71 +277,7 @@ section{
     transform: translateY(-8px);
 }
 
-/* .contact{
-    display: flex;
-    justify-content: space-evenly; */
-    /* grid-template-columns: repeat(auto-fit, minmax(500px, 100px)); */
-    /* align-items: center;
-    gap: 5rem;
-}
-
-.left-contact{
-    display: flex;
-    align-items: flex-start;
-    text-align: center;
-    gap: 2rem;
-}
-
-.in i{
-    color:var(--main-color);
-    opacity: 0.5;
-    font-size: 80px;
-    margin-bottom: 15px;
-    transition: all ease .40s;
-}
-
-.in i:hover{
-    opacity: 1;
-    cursor: pointer;
-}
-
-.in h4{
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 1px;
-}
-
-.right-contact h2{
-    font-family: "Dosis", sans-serif;
-    font-size: var(--h2-font);
-    font-weight: 800;
-    margin-bottom: 5px;
-}
-
-.right-contact a{
-    display: inline-block;
-    color: var(--main-color);
-    font-size: 20px;
-    font-weight: 600;
-    margin-bottom: 20px;
-    letter-spacing: 2px;
-    border-bottom: 2px solid var(--main-color);
-    padding: 3px 0;
-    transition: all ease .40s;
-}
-
-.right-contact a:hover{
-    transform: translateY(-5px);
-    color: var(--text-color);
-    border-bottom: 2px solid var(--text-color);
-}
-
-.right-contact p{
-    color: var(--other-color);
-    font-size: var(--p-font);
-    line-height: 30px;
-} */
-
+/* Language-section */
 .txt h3{
     font-family: "Dosis";
     font-size: var(--h2-font);
@@ -387,6 +327,7 @@ section{
     font-weight: 200;
 }
 
+/* project-section */
 .Projects{
     background: var(--second-bg-color);
     margin-bottom: 2rem;
@@ -575,6 +516,7 @@ section{
     cursor: pointer;
 }
 
+/* Qualification-section */
 .Qualification h2{
     font-size: 5rem;
     font-family: "Dosis";
@@ -635,6 +577,7 @@ section{
     letter-spacing: 1px;
 }
 
+/* footer-section */
 footer{
     background-color: var(--second-bg-color);
     width: auto;

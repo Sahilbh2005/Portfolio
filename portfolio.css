@@ -10,6 +10,9 @@
     outline: none;
 }
 
+
+
+
 :root{
     --bg-color: #191919;
     --second-bg-color: #101010;
@@ -650,4 +653,10 @@ footer{
     align-items: center;
     justify-content: center;
     margin: 1rem;
+}
+
+
+
+@media only screen and (max-width: 600px){
+    [class="hero_txt h1"
 }
